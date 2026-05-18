@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Anna Raventós — Cover</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    .cover {
+      /* Fondo original de marca (gradiente blanco → lavanda + onditas) */
+      background-image: url('../assets/bg/fondos-10.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 160px;
+    }
+
+    .cover__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .cover__title {
+      font-family: var(--iw-font);
+      font-weight: 500;
+      font-size: 88px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--iw-dark);
+      margin: 0;
+      max-width: 1100px;
+    }
+    .cover__title .iw-hl {
+      color: var(--iw-primary);
+      display: block;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="iw-stage">
+  <section class="iw-slide cover">
+
+    <div class="cover__body">
+      <h1 class="cover__title">
+        Hola, soy
+        <span class="iw-hl">Anna Raventós</span>
+      </h1>
+    </div>
+
+  </section>
+</div>
+</body>
+</html>
