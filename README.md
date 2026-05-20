@@ -97,6 +97,7 @@ Al crear un design system para Anna Raventós:
 - **Pesos ≤ 600.** Nunca heavy 800-900 (rompe el feel delicado).
 - **Highlights con GiftenSans italic**, no con bold mono color como las otras marcas.
 - **Brand puro `#7E69E3` y mid `#B5A2EE` → contenido siempre blanco.**
+- **NUNCA usar eyebrow/kicker/texto sobre los headlines**. Los títulos abren la slide sin texto encima — la diapositiva empieza directamente por el h1. Composición limpia.
 
 ## Mantenimiento
 
