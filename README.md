@@ -7,7 +7,6 @@ Sistema de diseño completo para presentaciones, landings y comunicación visual
 ```
 anna-raventos/
 ├── tokens.css              ← Fuente única de verdad: paleta, tipografía, componentes
-├── voice.md                ← Guía de voz y tono
 ├── preview.html            ← Catálogo visual de todas las plantillas y diagrams
 ├── README.md               ← Este archivo
 ├── assets/
@@ -84,7 +83,7 @@ Al crear un design system para Anna Raventós:
 
 1. **Link code on GitHub:** apunta a este repo.
 2. **Add fonts, logos and assets:** sube manualmente los logos de `assets/logos/`.
-3. **Any other notes:** pega un resumen de `voice.md`.
+3. **Any other notes:** la voz y tono del cliente se gestiona desde las skills de texto de la agencia, no en este repo.
 
 ## Reglas no negociables del sistema
 
@@ -98,10 +97,6 @@ Al crear un design system para Anna Raventós:
 - **Pesos ≤ 600.** Nunca heavy 800-900 (rompe el feel delicado).
 - **Highlights con GiftenSans italic**, no con bold mono color como las otras marcas.
 - **Brand puro `#7E69E3` y mid `#B5A2EE` → contenido siempre blanco.**
-
-## Voz y tono
-
-Ver [voice.md](./voice.md).
 
 ## Mantenimiento
 
