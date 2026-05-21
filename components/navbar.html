@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Anna Raventós — Navbar</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    /* ─────────────────  NAVBAR (Anna)  ─────────────────
+       Coherente con web real de Anna Raventós:
+       - Logo izquierda (lockup serif + sparkle)
+       - Links centro (Sobre Mí, Trabaja Conmigo, Recursos)
+       - CTA "Acceder" pill NEGRO (no lila brand, igual que su web)
+       - Sticky, background blanco, sin shadow
+    */
+
+    .iw-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #FFFFFF;
+      padding: 22px 64px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 56px;
+      align-items: center;
+      /* sin shadow — Anna feel más aireado */
+    }
+
+    .iw-navbar__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--iw-font);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--iw-dark);
+      text-decoration: none;
+    }
+    .iw-navbar__logo img { height: 40px; width: auto; display: block; }
+
+    .iw-navbar__links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+    }
+    /* Links case normal, peso 500 (Anna feel delicado, no rígido uppercase) */
+    .iw-navbar__links a {
+      font-family: var(--iw-font);
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--iw-dark);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .iw-navbar__links a:hover { color: var(--iw-primary); }
+    .iw-navbar__links a.is-active { color: var(--iw-primary); }
+
+    .iw-navbar__actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .iw-navbar__acceder {
+      font-family: var(--iw-font);
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--iw-dark);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .iw-navbar__acceder:hover { color: var(--iw-primary); }
+
+    /* CTA negro pill (Anna pattern — su "Acceder" del navbar real) */
+    .iw-navbar__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #000000;
+      color: #FFFFFF;
+      font-family: var(--iw-font);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 26px;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .iw-navbar__cta:hover { background: #1A1A1A; }
+
+    /* Mobile: hamburger (representativo) */
+    .iw-navbar__hamburger {
+      display: none;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .iw-navbar { grid-template-columns: auto 1fr auto; padding: 14px 24px; }
+      .iw-navbar__links { display: none; }
+      .iw-navbar__hamburger { display: block; }
+    }
+
+    /* ─────────────────  Preview  ───────────────── */
+    body {
+      margin: 0;
+      background: #FAFAFA;
+      font-family: var(--iw-font);
+    }
+    .specimen-pad { padding: 60px; }
+    .specimen-pad h2 {
+      font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--iw-ink-muted); margin: 0 0 24px 0; font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar real -->
+  <nav class="iw-navbar">
+    <a href="#" class="iw-navbar__logo">
+      <img src="../assets/logos/logo-anna-28.png" alt="Anna Raventós">
+    </a>
+
+    <ul class="iw-navbar__links">
+      <li><a href="#" class="is-active">Sobre Mí</a></li>
+      <li><a href="#">Trabaja Conmigo</a></li>
+      <li><a href="#">Recursos</a></li>
+    </ul>
+
+    <div class="iw-navbar__actions">
+      <a href="#" class="iw-navbar__cta">Acceder</a>
+    </div>
+  </nav>
+
+  <div class="specimen-pad">
+    <h2>Navbar — Notas de uso (Anna)</h2>
+    <p style="max-width: 700px; color: var(--iw-ink-soft); line-height: 1.6;">
+      Sticky, background blanco, sin shadow (más aireado que IW).
+      Logo a la izquierda (lockup serif + sparkle: logo-anna-28.png).
+      3 links principales en centro (case normal, peso 500 — más delicado que uppercase).
+      A la derecha: CTA "Acceder" en pill NEGRO (no lila brand — coherente con web real).
+      En mobile (&lt;900px) los links se ocultan y aparece hamburger.
+    </p>
+  </div>
+
+</body>
+</html>

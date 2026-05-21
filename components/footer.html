@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Anna Raventós — Footer</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    /* ─────────────────  FOOTER (Anna)  ─────────────────
+       Basado en la web real de Anna: sobrio, fondo blanco,
+       línea decorativa con sparkle, brand name + 3 legales + copyright.
+       NO usar dark navy — no encaja con su feel delicado y aireado.
+    */
+
+    .iw-footer {
+      background: #FFFFFF;
+      color: var(--iw-ink-soft);
+      padding: 56px 64px 36px;
+      font-family: var(--iw-font);
+      border-top: 1px solid rgba(126, 105, 227, 0.10);
+    }
+
+    /* Divisor central con sparkle (firma visual de Anna) */
+    .iw-footer__divider {
+      max-width: 1400px;
+      margin: 0 auto 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      color: var(--iw-primary);
+    }
+    .iw-footer__divider::before,
+    .iw-footer__divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(126, 105, 227, 0.20);
+      max-width: 220px;
+    }
+    .iw-footer__sparkle {
+      width: 20px;
+      height: 20px;
+      color: var(--iw-primary);
+    }
+
+    .iw-footer__row {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    /* Logo de Anna (lockup navy + sparkle lila) */
+    .iw-footer__brand {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
+
+    .iw-footer__legal {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .iw-footer__legal a {
+      font-size: 14px;
+      color: var(--iw-ink-soft);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .iw-footer__legal a:hover { color: var(--iw-primary); }
+
+    .iw-footer__copy {
+      font-size: 13px;
+      color: var(--iw-ink-muted);
+      margin: 28px auto 0;
+      max-width: 1400px;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .iw-footer__row {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+      .iw-footer__legal {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    body { margin: 0; background: #FAFAFA; }
+  </style>
+</head>
+<body>
+
+  <footer class="iw-footer">
+
+    <div class="iw-footer__divider" aria-hidden="true">
+      <svg class="iw-footer__sparkle" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M 12 2 L 16 8 L 22 12 L 16 16 L 12 22 L 8 16 L 2 12 L 8 8 Z"/>
+      </svg>
+    </div>
+
+    <div class="iw-footer__row">
+      <img class="iw-footer__brand" src="../assets/logos/logo-anna-28.png" alt="Anna Raventós">
+      <ul class="iw-footer__legal">
+        <li><a href="#">Políticas de privacidad</a></li>
+        <li><a href="#">Legales</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+      </ul>
+    </div>
+
+    <p class="iw-footer__copy">© 2026 Anna Raventós. Todos los derechos reservados.</p>
+
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Anna Raventós — Cards</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    /* ─────────────────  CARDS  ─────────────────
+       Variantes coherentes con web real:
+       - Card light (sobre fondo claro)
+       - Card light con icono circular brand
+       - Card con media (foto arriba)
+       - Card dark (sobre navy)
+       - Card lavanda (background light brand)
+    */
+
+    .iw-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: var(--iw-shadow-md);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .iw-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--iw-shadow-lg);
+    }
+    .iw-card__title {
+      font-family: var(--iw-font);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--iw-dark);
+      margin: 0 0 12px 0;
+      line-height: 1.25;
+    }
+    .iw-card__desc {
+      font-family: var(--iw-font);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--iw-ink-soft);
+      margin: 0;
+    }
+    .iw-card__desc strong { color: var(--iw-dark); font-weight: 700; }
+
+    /* Icono circular brand arriba */
+    .iw-card__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--iw-light);
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      color: var(--iw-primary);
+    }
+    .iw-card__icon svg { width: 28px; height: 28px; }
+
+    /* Variante: card lavanda (background light brand al 50%) */
+    .iw-card--lavender {
+      background: rgba(215, 228, 255, 0.45);
+      box-shadow: none;
+    }
+    .iw-card--lavender:hover { box-shadow: var(--iw-shadow-md); }
+
+    /* Variante: card de impacto — fondo lila brand (Anna no usa navy dark) */
+    .iw-card--dark {
+      background: var(--iw-primary);
+      color: var(--iw-on-dark);
+    }
+    .iw-card--dark .iw-card__title { color: var(--iw-on-dark); }
+    .iw-card--dark .iw-card__desc { color: rgba(255, 255, 255, 0.85); }
+    .iw-card--dark .iw-card__icon {
+      background: rgba(255, 255, 255, 0.18);
+      color: #FFFFFF;
+    }
+
+    /* Variante: card con media arriba */
+    .iw-card--media {
+      padding: 0;
+      overflow: hidden;
+    }
+    .iw-card__media {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: var(--iw-light);
+      overflow: hidden;
+    }
+    .iw-card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .iw-card--media .iw-card__body { padding: 28px 32px 32px; }
+
+    /* Numbered badge — fondo lila brand (Anna pattern) */
+    .iw-card__badge {
+      display: inline-grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--iw-primary);
+      color: var(--iw-on-dark);
+      font-family: var(--iw-font);
+      font-weight: 800;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* ─────────────────  Preview  ───────────────── */
+    body {
+      padding: 60px;
+      background: #FAFAFA;
+      font-family: var(--iw-font);
+    }
+    .specimen-section { margin-bottom: 64px; }
+    .specimen-section h2 {
+      font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--iw-ink-muted); margin: 0 0 24px 0; font-weight: 700;
+    }
+    .specimen-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="specimen-section">
+    <h2>Card light con icono</h2>
+    <div class="specimen-grid">
+      <article class="iw-card">
+        <div class="iw-card__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M 12 2 L 16 8 L 22 12 L 16 16 L 12 22 L 8 16 L 2 12 L 8 8 Z"/>
+          </svg>
+        </div>
+        <h3 class="iw-card__title">Negocio simple</h3>
+        <p class="iw-card__desc">Una oferta clara que <strong>te da paz</strong> y deja de depender de tu tiempo.</p>
+      </article>
+
+      <article class="iw-card">
+        <div class="iw-card__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M 12 2 L 16 8 L 22 12 L 16 16 L 12 22 L 8 16 L 2 12 L 8 8 Z"/>
+          </svg>
+        </div>
+        <h3 class="iw-card__title">Ingresos predecibles</h3>
+        <p class="iw-card__desc">Captas clientes <strong>todos los días</strong> sin publicar en redes a diario.</p>
+      </article>
+
+      <article class="iw-card">
+        <div class="iw-card__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M 12 2 L 16 8 L 22 12 L 16 16 L 12 22 L 8 16 L 2 12 L 8 8 Z"/>
+          </svg>
+        </div>
+        <h3 class="iw-card__title">Tiempo y libertad</h3>
+        <p class="iw-card__desc">Vives alineada con tu propósito, <strong>sin agotarte</strong>.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="specimen-section">
+    <h2>Card lavanda (background light brand)</h2>
+    <div class="specimen-grid">
+      <article class="iw-card iw-card--lavender">
+        <h3 class="iw-card__title">Sin publicar a diario</h3>
+        <p class="iw-card__desc">Tu negocio no depende de las redes ni del algoritmo.</p>
+      </article>
+      <article class="iw-card iw-card--lavender">
+        <h3 class="iw-card__title">Sin agotarte</h3>
+        <p class="iw-card__desc">Marketing alineado contigo, sin forzar ni manipular.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="specimen-section">
+    <h2>Card de impacto (fondo lila brand)</h2>
+    <div class="specimen-grid">
+      <article class="iw-card iw-card--dark">
+        <div class="iw-card__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M 12 2 L 16 8 L 22 12 L 16 16 L 12 22 L 8 16 L 2 12 L 8 8 Z"/>
+          </svg>
+        </div>
+        <h3 class="iw-card__title">Vender desde la calma</h3>
+        <p class="iw-card__desc">Marketing alineado con tu propósito y respetuoso con las leyes del universo.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="specimen-section">
+    <h2>Card con badge numerado</h2>
+    <div class="specimen-grid">
+      <article class="iw-card">
+        <div class="iw-card__badge">1</div>
+        <h3 class="iw-card__title">Simplificas tu oferta</h3>
+        <p class="iw-card__desc">Una oferta escalable que tu cliente quiera comprar y tú disfrutes vendiendo.</p>
+      </article>
+      <article class="iw-card">
+        <div class="iw-card__badge">2</div>
+        <h3 class="iw-card__title">Captas con estabilidad</h3>
+        <p class="iw-card__desc">Clientes todos los días sin publicar contenidos a diario.</p>
+      </article>
+      <article class="iw-card">
+        <div class="iw-card__badge">3</div>
+        <h3 class="iw-card__title">Vives alineada</h3>
+        <p class="iw-card__desc">Negocio simple con ingresos predecibles, paz y tiempo para disfrutar.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="specimen-section">
+    <h2>Card con media (foto arriba)</h2>
+    <div class="specimen-grid">
+      <article class="iw-card iw-card--media">
+        <div class="iw-card__media">
+          <!-- Reemplazar con: <img src="ruta-foto.jpg" alt="Caso de éxito"> -->
+        </div>
+        <div class="iw-card__body">
+          <h3 class="iw-card__title">Caso Mireia Solsona</h3>
+          <p class="iw-card__desc">Etsy Lovers. <strong>Simplificó su negocio</strong> para centrarse en lo que aporta más valor.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</body>
+</html>
